@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Navbar({children}) {
     const [extendNav, setExtendNav] = useState(false)
   return (
-    <>
+    <div>
     <NavbarContainer>
         <NavbarLink to="/">    
             <LogoDiv>
@@ -25,7 +25,7 @@ export default function Navbar({children}) {
         <OpenLinksButton onClick={() => {setExtendNav((curr) => !curr)}}> {extendNav ? <>&#10005;</> : <>&#8801;</>} </OpenLinksButton>
     </NavbarContainer>
     {
-        extendNav && (
+        extendNav ? (
             <NavbarExtendedContainer>
                 <ul>
                     <NavbarLink to="/docs"><li>Docs</li></NavbarLink>
@@ -35,9 +35,9 @@ export default function Navbar({children}) {
                     <NavbarLink to="/github"><li>GitHub</li></NavbarLink>
                 </ul>
             </NavbarExtendedContainer>
-        )
+        ) : null
     }
-    </>
+    </div>
   )
 }
 

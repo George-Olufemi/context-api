@@ -30,8 +30,8 @@ export default function Home() {
         <h1>Home page</h1>
         {card}
         {
-          data.map(d => 
-          <div>
+          data.map((d, idx) => 
+          <div key={idx}>
           <h1>{d.name}</h1>
           <img src={d.image} alt="" />
           </div>

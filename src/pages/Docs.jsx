@@ -5,11 +5,11 @@ export const NameContext = React.createContext();
 export const ColorContext = React.createContext();
 
 const Docs = () => {
-    const [color, setColor] = React.useState('Red')
+    const colorStore = "Red"
   return (
     <Doccs>
         <NameContext.Provider value={'Smith'}>
-            <ColorContext.Provider value={color}>
+            <ColorContext.Provider value={colorStore}>
                 <ComponentA />
             </ColorContext.Provider>
         </NameContext.Provider>

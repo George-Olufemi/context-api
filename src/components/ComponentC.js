@@ -1,6 +1,6 @@
 import React from 'react';
 import { NameContext } from '../pages/Docs';
-import styled from 'styled-components';
+//import styled from 'styled-components';
 
 export default function ComponentC() {
   return (
